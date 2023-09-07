@@ -12,11 +12,7 @@ class norm_params:
     scale_param:np.array()
 
 class FuzzyClassifier:
-    """Fuzzy logic system for classification problems using type-1 and type-2 approaches.
 
-    The fuzzy rules are defined according to the data.
-
-    """
     def __init__(
             self,
             epochs=None,
@@ -36,13 +32,7 @@ class FuzzyClassifier:
             # Normalization
             self.normalization = normalization
             self.normalization_type = normalization_type
-            '''
-            StandardScaler - Standardize features by removing the mean and scaling to unit variance.
-            MinMaxScaler - Rescales the data set such that all feature values are in the range [0, 1].
-            '''
-
-            # Missing Data (Future)
-
+            
             # Training Settings
             self.epochs = epochs
             self.n_rules = n_rules
@@ -119,23 +109,4 @@ class FuzzyClassifier:
                     mat_std0[cont,:]=X_var[i,:]*random.uniform(-1,1)+X_var[i,:]
                 cont=cont+1
         return mat_mean0, mat_std0, theta0    
-
-
-    
-    # def fit(self, df, validation_df, verbose):
-
-    
-
-
-def convert(my_name):
-    """
-    Print a line about converting a notebook.
-    Args:
-        my_name (str): person's name
-    Returns:
-        None
-    """
-
-    print(f"I'll convert a notebook for you some day, {my_name}.")
-
-convert('Mateus')
+ 
