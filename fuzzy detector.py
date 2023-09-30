@@ -11,7 +11,7 @@ class norm_params:
     shift_param:np.array()
     scale_param:np.array()
 
-class FuzzyClassifier:
+class FD:
 
     def __init__(
             self,
@@ -27,7 +27,7 @@ class FuzzyClassifier:
         ):
     
             # Name
-            self.name = "FuzzyClassifier"
+            self.name = "FD"
 
             # Normalization
             self.normalization = normalization
